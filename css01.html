@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스타일 연습 -기본</title>
+
+    <style>
+         /*
+        스타일 지정의 기본 문법
+        선택자 {스타일속성1:값; 스타일속성2:값}
+        선택자: 스타일을 부여할 대상
+        */
+        * { margin: 0; padding: 0;}      /* 전체 선택자 */
+        h2 { border-bottom:3px dotted rgb(122, 20, 255);}   /* 태그 선택자*/
+        .para { color:aqua ;} /* 클래스 선택자*/
+        #con1 { font-size:24px; color:chartreuse;}  /*아이디 선택자 (선택자 중에 제일 첫 번째*/ 
+        p { color:blueviolet;}
+        p.para { color:beige;} /*복합 선택자(태그랑 클래스)*/
+        p#con2 { color:brown;} /* 앞에 순서는 상관없이 붙여서 쓰면 가능 (#con2p.p)*/
+         /*(컬러)!important -> 강제로 설정하기  (안 쓰는게 좋음)*/
+         /*태그 < 클래스 <아이디 (우선순위)  아이디는 제일 마지막에 설정 하는 것이 좋다*/
+        div, p {border-top:1px solid #333; margin-top:30px;}
+    </style>
+
+</head>
+<body>
+    <div>
+        <h2>제목</h2>  =$0
+        <P>id="con1" class="para">이재호</P>
+        <P>id="con2" class="para">호재이</P>
+        <P>id="con3" class="para">호호호</P>
+    </div>
+</body>
+
+
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스타일 연습 - 속성 선택자</title>
+    <style>
+        /* attribute : 태그의 속성, property : 스타일의 속성 */
+        /* 속성 선택자 : [attr] */
+        a {text-decoration: none; }
+        a[href] {color:salmon;} /* href의 속성이 존재하는 요소 */
+        [href^="https"] {font-weight: bold;} /* href속성이 https로 시작하는 요소*/
+        [href$=".pdf"] {font-size: 34px;} /* href속성이 .pdf로 끝나는 요소*/
+        [href*="010"]::before{content:"핸드폰 번호 : "} /* href속성이 010포함하고 있는 모든 거 비포(앞에)*/
+        [href*="010"]::after{content:"입니다."} /* href속성이 010포함하고 있는 모든 거 에프터(뒤에)*/
+        a[href$=".com"] {color:black;}
+
+    img {width:220px; height: 500px margin-right 40px;;}
+    img[src$="jpg"]{border: 61px solid red; }
+    img[src$="png"]{border: 61px solid blue; }
+    img[src$="gif"]{border: 61px solid yellow; }
+    img[src$="jiff"]{border: 61px solid green; }
+    </style>
+</head>
+<body>
+    <div>
+        <a title="href가 없는 링크">링크1</a><br>
+        <a href="kbs.html" title="href가 있는 링크">링크2</a><br>
+        <a href="https://www.google.com" title="구글 링크">링크3</a><br>
+        <a href="guide.pdf" title="문서 다운로드 링크">링크4</a><br>
+        <a href="http://www.naver.com" title="네이버링크">링크5</a><br>
+        <a href="http://github.com" title="깃허브링크">링크6</a><br>
+        <a href="tel:010-1234-1234" title="전화걸기링크">링크7</a><br>
+        <a href="sms:010-4321-4321" title="문자보내기링크">링크8</a>
+    </div>
+   <div>
+        <img src="1.jpg" alt="">
+        <img src="2.png" alt="">
+        <img src="3.gif" alt="">
+        <img src="4.jiff" alt="">
+   </div>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스타일 연습 -구조 선택자</title>
+ <style>
+        /*인접 요소 선택자
+    h2 +ul 태그는 ->+는 h2뒤에 바로오는 태그만 적용된다.
+    h2~ul -> ~는 h2 뒤에 나머지 다 선택 된다*/ 
+    .com li  .com 안에 있는 li만 선택해라 -> 자식을 포함 후손까지 선택 (띄고 li)
+    .com > ul .com 안에 있는 ul자식만 선택해라  (>)
+
+
+    h2+ul {list-style: square;}
+    u1+u1 {list-style: circle;}
+    h2~u1 {border: 3px; solid gold;}
+ </style>
+</head>
+<body>
+    
+
+
+
+div>class="con">
+    <ui class="lst2">
+    <li>내용1</li>
+    <li>내용2</li>
+    <li>내용3</li>
+    <li>내용4</li>
+    </ui>
+<ui class="lst3">
+    <li>내용1</li>
+    </ui>
+</div>
+<hr>
+<article>
+
+
+    <h2>article 요소 안의 목록</h2>
+    <h2>article 요소 안의 목록</h2>
+    <ui>
+        <li>목록1</li>
+        <li>목록2</li>
+        <li>목록3</li>
+        <li>목록4</li>
+        <li>목록5</li>
+    </ui>
+    <ol>
+        <li>목록1</li>
+        <li>목록2</li>
+        <li>목록3</li>
+        <li>목록4</li>
+        <li>목록5</li>
+    </ol>
+</article>
+    <div class="con" title="자식이 없는 요소"></div>
+    <div class="con">여기는 내용
+        <p title="내용이 없는 요소"></p>
+    </div>
+</body>
+</html>
